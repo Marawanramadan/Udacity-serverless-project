@@ -6,6 +6,8 @@ plugins:
   - serverless-reqvalidator-plugin
   - serverless-aws-documentation
   - serverless-iam-roles-per-function
+  - serverless-plugin-tracing
+
 
 
 provider:
@@ -27,9 +29,9 @@ provider:
 
 
   environment:
-    TODOS_TABLE: Todos-islam2-${self:provider.stage}
+    TODOS_TABLE: Todos-marawan-${self:provider.stage}
     TODOS_ID_INDEX: TodosIdIndex
-    TODOS_S3_BUCKET: todos-s3-islam-${self:provider.stage}
+    TODOS_S3_BUCKET: todos-s3-marawan-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
     AUTH_0_SECRET_ID: Auth0TodoSecret-${self:provider.stage}
     AUTH_0_SECRET_FIELD: auth0Secret
